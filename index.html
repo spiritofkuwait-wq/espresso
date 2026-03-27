@@ -1067,9 +1067,10 @@ If you cannot read a value clearly, use null.`,
     document.getElementById('shot-ai-result').classList.add('visible');
 
   } catch (err) {
-    document.getElementById('shot-ai-result').textContent = 'Could not read screenshot. Please fill in manually.';
-    document.getElementById('shot-ai-result').classList.add('visible');
-  }
+  document.getElementById('shot-ai-result').textContent = 'Error: ' + err.message;
+  document.getElementById('shot-ai-result').classList.add('visible');
+}
+
 
   document.getElementById('ai-thinking-shot').style.display = 'none';
 }
